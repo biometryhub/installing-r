@@ -23,21 +23,11 @@ params:
 
 # Introduction  
 
-**Welcome!**  
-
-We are looking forward to meeting you, and teaching you about R!  
-
-This document provides a brief introduction and a step-by-step guide on the installation of all software requirements for the course. These instructions will enable participants to have R, R-studio, and other packages operational before the first day of the course.  We will be using the R environment for statistical computing and graphics, so we need to install the following:  
-
-- The language platform - [R](#R)
-- An integrated development environment (IDE) - [RStudio](#RStudio), which serves as the front end, or interface, for R.
-- The required additional extra packages
-
-Installation of additional packages will be required for later courses (e.g. ASReml-R), but for the first course _Introduction to R_, R and RStudio are enough.
+These instructions will enable installation of R, R-studio, and other packages.  
 
 This guide assumes you are running a relatively recent version of Microsoft Windows (e.g. Windows 8/8.1/10) or Mac OS X/macOS (10.6+).  
   
-R and RStudio are available for some of the most common Linux distributions (DEB and RPM packages available), and there is no problem using Linux for the courses, but unfortunately we can't provide installation instructions at this time. There are several guides available on the internet, so if you have problems we suggest this is a good starting point.
+R and RStudio are available for some of the most common Linux distributions (DEB and RPM packages available, as well as [Docker images](https://hub.docker.com/u/rocker)), and the basic installation steps are the same. However, due to the variations in Linux, we can't provide installation instructions at this time. There are several guides available on the internet, so if you have problems we suggest this is a good starting point.
 
 
 # Installation
