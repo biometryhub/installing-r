@@ -1,31 +1,34 @@
 ---
-title: "<center>Installing and Configuring R and RStudio</center>"
+title: <center>Installing and Configuring R and RStudio</center>
 author: 
 - <center>Biometry Hub, University of Adelaide<center>
 - <center>biometrytraining@adelaide.edu.au<center>
 date: "<center>Last updated: `r format(Sys.Date(), format='%B %Y')`</center>"
 output:
-  pdf_document:
-    fig_caption: yes
-    toc: yes
   html_document:
     toc: yes
     toc_float: yes
     keep_md: true
+    highlight: textmate
+  pdf_document:
+    fig_caption: yes
+    toc: yes
+    highlight: tango
 linkcolor: blue
 urlcolor: blue
+# knit: (
+#     function(inputFile, encoding) {
+# 
+#         filename <- 'installing-r'
+# 
+#         rmarkdown::render(
+#             input       = inputFile,
+#             encoding    = encoding,
+#             output_file = filename) })
 params:
     rlatest: "4.1.2"
     
-knit: (
-    function(inputFile, encoding) {
 
-        filename <- 'installing-r'
-
-        rmarkdown::render(
-            input       = inputFile,
-            encoding    = encoding,
-            output_file = filename) })
 ---
 
 
@@ -132,7 +135,10 @@ These will be discussed further in the workshop, however to maximise learning ti
 
 Once RStudio is open (see [Check](#Check) above), just copy and paste the following command next to the `>` arrow in the console window on the left hand side of the session (see image below for placement), and then press enter.  
 
-`source("http://bit.do/installr")`  
+```{r, eval=FALSE}
+source("https://link.biometryhubwaite.com/installpackages")
+```
+
 <br>  
 ![RStudio package installation](Images/Installing_R/R_studio_installing_packages.png) 
 
