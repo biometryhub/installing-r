@@ -1,14 +1,16 @@
-required_packages <- function() {
-    required <- c(
-        # tidyverse
-        "tidyverse",
-        # Rstudio
-        "rmarkdown",
-        # W3 packages
-        "tinytex", "pander", "kableExtra", "remotes",
-        # biometryassist
-        "biometryassist"
-    )
+required_packages <- function(required) {
+    if(missing(required)) {
+        required <- c(
+            # tidyverse
+            "tidyverse",
+            # Rstudio
+            "rmarkdown",
+            # W3 packages
+            "tinytex", "pander", "kableExtra", "remotes",
+            # biometryassist
+            "biometryassist"
+        )
+    }
 
     if(Sys.info()[['sysname']]!="Linux") {
         oo <- options(install.packages.compile.from.source = "never")
@@ -39,8 +41,11 @@ required_packages <- function() {
             stop("Installation unsuccessful.")
         }
         else{
-            message("\nAll required packages have been installed.\n\n\n")
+            message("All required packages have been installed.\n")
         }
+    }
+    else {
+        message("\nRequired packages are installed.\n")
     }
 }
 required_packages()
