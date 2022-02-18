@@ -42,5 +42,5 @@ required_packages <- function() {
             message("\nAll required packages have been installed.\n\n\n")
         }
     }
-
 }
+required_packages()

@@ -53,7 +53,7 @@ R and RStudio are available for some of the most common Linux distributions (DEB
 # Installation
 ## Environment Variables (Windows Only) {#EVs .tabset}
 
-Those using University of Adelaide Computers Windows will need to first set up Environment variables in Windows. For other Windows users this step is optional, but **recommended**.
+Those using University of Adelaide computers with Microsoft Windows should first set up Environment variables in Windows. For other Windows users this step is optional, but **recommended**.
 
 The default way R is installed can cause some issues for Windows computers, especially University owned computers. Using environment variables forces R to install packages to a location which can prevent issues. If you have trouble with this step, you may need to contact your IT administrators for their assistance.
 
