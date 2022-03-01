@@ -3,7 +3,7 @@ title: <center>Installing and Configuring R and RStudio</center>
 author: 
 - <center>Biometry Hub, University of Adelaide<center>
 - <center>biometrytraining@adelaide.edu.au<center>
-date: "<center>Last updated: February 2022</center>"
+date: "<center>Last updated: March 2022</center>"
 output:
   html_document:
     toc: yes
@@ -16,19 +16,8 @@ output:
     highlight: tango
 linkcolor: blue
 urlcolor: blue
-# knit: (
-#     function(inputFile, encoding) {
-# 
-#         filename <- 'installing-r'
-# 
-#         rmarkdown::render(
-#             input       = inputFile,
-#             encoding    = encoding,
-#             output_file = filename) })
 params:
     rlatest: "4.1.2"
-    
-
 ---
 
 
@@ -38,22 +27,25 @@ params:
 
 **Welcome!**  
 
-This document provides a brief introduction and a step-by-step guide on the installation of all software requirements for the Biometry Hub workshops including R, Rstudio and required packages, and may also be useful for other situations. We will be using the R environment for statistical computing and graphics, so we need to install the following:  
+This guide provides a brief introduction and a step-by-step guide on the installation of all software requirements for the Biometry Hub workshops including R, Rstudio and required packages. It may also be useful for other situations such as an internship or student project with the Biometry Hub. You can find a PDF copy of this guide here: https://github.com/biometryhub/installing-r/raw/master/installing-r.pdf
+
+
+We will be using the R environment for statistical computing and graphics, so we need to install the following:  
 
 - The language platform - [R](#R)
 - An integrated development environment (IDE) - [RStudio](#RStudio), which serves as the front end, or interface, for R.
 - The required additional extra packages
 
-Installation of additional packages will be required for later courses (e.g. ASReml-R), but for the first course _Introduction to R_, R and RStudio are enough.
+Installation of additional packages will be required for later courses (e.g. `biometryassist` and `ASReml-R`), but for the first course _Introduction to R_, R and RStudio are enough.
 
-This guide assumes you are running a relatively recent version of Microsoft Windows (e.g. Windows 8/8.1/10) or Mac OS X/macOS (10.9+).  
+This guide assumes you are running a relatively recent version of Microsoft Windows, for example Windows 8 or later, or Mac OS X/macOS 10.11 (El Capitan) or later.
 
 R and RStudio are available for some of the most common Linux distributions (DEB and RPM packages available), and there is no problem using Linux for the courses, but unfortunately we can't provide installation instructions at this time. There are several guides available on the internet, so if you have problems we suggest this is a good starting point.
 
 # Installation
 ## Environment Variables (Windows Only) {#EVs .tabset}
 
-Those using University of Adelaide Computers Windows will need to first set up Environment variables in Windows. For other Windows users this step is optional, but **recommended**.
+Those using University of Adelaide computers with Microsoft Windows should first set up Environment variables in Windows. For other Windows users this step is optional, but **recommended**.
 
 The default way R is installed can cause some issues for Windows computers, especially University owned computers. Using environment variables forces R to install packages to a location which can prevent issues. If you have trouble with this step, you may need to contact your IT administrators for their assistance.
 
@@ -91,9 +83,6 @@ R is a language and platform for statistics, computing and graphics, that is fre
 i) macOS 10.13 (High Sierra) and later (Intel 64bit): At the time of writing [R 4.1.2](https://cran.r-project.org/bin/macosx/R-4.1.2.pkg) was the latest version.
 i) macOS 11 (Big Sur) and later (Apple M1 Chips or later): At the time of writing [R 4.1.2](https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.1.2-arm64.pkg) was the latest version.
 i) macOS 10.11 (El Capitan) and 10.12 (Sierra): At the time of writing [R 3.6.3](https://cloud.r-project.org/bin/macosx/R-3.6.3.nn.pkg) was the latest version.
-i) macOS 10.9 (Mavericks) and 10.10 (Yosemite): At the time of writing [R 3.3.3](https://cran.rstudio.com/bin/macosx/R-3.3.3.pkg) was the latest version.  
-2. Run the downloaded file by opening the folder where you downloaded the file and double clicking on the filename (e.g. R-4.1.2).
-3. Follow the prompts in the installation. For our purposes, the installation defaults are satisfactory, so you can simply click on `Next` through the installation until it is complete.
 
 
 ## RStudio {#RStudio .tabset .tabset-fade}

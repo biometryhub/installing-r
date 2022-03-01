@@ -1512,7 +1512,7 @@ Biometry Hub, University of Adelaide
 <a href="mailto:biometrytraining@adelaide.edu.au" class="email">biometrytraining@adelaide.edu.au</a>
 <center></h4>
 <h4 class="date"><center>
-Last updated: February 2022
+Last updated: March 2022
 </center></h4>
 
 </div>
@@ -1524,12 +1524,13 @@ Last updated: February 2022
 <p>These instructions assume you already have a working version of R on
 your computer. If this is not yet the case, please follow these
 instructions: <a href="https://biometryhub.github.io/installing-r/installing-r.html" class="uri">https://biometryhub.github.io/installing-r/installing-r.html</a></p>
-<p>This guide uses Rstudio, but that is optional - it will work equally
-well with any alternative R development environment.</p>
+<p>This guide does not assume any particular R development environment -
+it will work equally well with any option.</p>
 <p>This guide assumes you are running a relatively recent version of
-Microsoft Windows (e.g. Windows 8/8.1/10) or Mac OS X/macOS (10.6+). The
-guide will likely work for Debian-like Linux distributions as well (E.g.
-Ubuntu flavours), however it is not tested under those scenarios.</p>
+Microsoft Windows, for example Windows 8 or later, or Mac OS X/macOS
+10.11 (El Capitan) or later. The guide will likely work for Debian based
+Linux distributions as well (E.g. Ubuntu flavours), however it is not
+extensively tested under those scenarios.</p>
 </div>
 <div id="asreml-r-installation" class="section level1">
 <h1>ASReml-R Installation</h1>
@@ -1537,7 +1538,7 @@ Ubuntu flavours), however it is not tested under those scenarios.</p>
 <h2>biometryassist</h2>
 <p>You will need the <code>biometryassist</code> package, which can be
 installed from CRAN via</p>
-<pre class="r"><code>install.packages(&quot;biometryassist&quot;)</code></pre>
+<pre class="r"><code>if(!require(biometryassist)) install.packages(&quot;biometryassist&quot;)</code></pre>
 </div>
 <div id="asreml-r" class="section level2">
 <h2>ASReml-R</h2>
@@ -1548,16 +1549,36 @@ install_asreml()</code></pre>
 <p>The <code>install_asreml()</code> function comes from the
 <code>biometryassist</code> package, hence the need to install and load
 that first.</p>
+<p>All going well, you should get a confirmation that ASReml-R is
+installed successfully.</p>
+</div>
+<div id="activate-asreml-r" class="section level2">
+<h2>Activate ASReml-R</h2>
+<p>After you have installed ASReml-R, you will need to activate it. To
+do this, you will need to provide a licence code from VSNi, and possibly
+open two ports on your computer to allow communication over the internet
+with the VSNi licence server. To enter the licence code, use the
+following commands:</p>
+<pre class="r"><code>library(asreml)
+asreml.license.activate()</code></pre>
+<p>This will result in a prompt such as:</p>
+<pre><code>Please enter your activation code (RET or 0 to exit): </code></pre>
+<p>The licence code is usually in the format
+<code>AAAA-BBBB-CCCC-DDDD</code>. Once entered, your computer will
+connect to the VSNi licence server to check the code is correct, and you
+will be informed of the outcome.</p>
+<p>A successful licence activation will result in a message like the
+following:</p>
+<pre><code>Licensed to ABcDEfg
+Ref: ABC12345 Expires: 2023-06-30, 487 days.</code></pre>
 </div>
 </div>
-<div id="done" class="section level1">
-<h1>Done!</h1>
-<p>Congratulations! If you have made it this far, you are now set up and
-ready for the workshop.</p>
-<p>If you have experienced issues or errors and the software has not
-installed correctly, please <a href="mailto:biometrytraining@adelaide.edu.au">contact us early via
-email</a>. Alternatively, you can arrive 15 minutes early for the
-workshop to allow time to get the software installed and ready.</p>
+<div id="additional-packages-optional" class="section level1">
+<h1>Additional Packages (Optional)</h1>
+<p>If you are participating in an intership with the Biometry Hub, you
+may require additional packages installed, such as ASMap.</p>
+<p>To install them, run the following command:</p>
+<pre class="r"><code>install.packages(&quot;ASMap&quot;)</code></pre>
 <hr />
 </div>
 <div id="Further" class="section level1">
@@ -1572,6 +1593,7 @@ you are interested in reading a bit further.</p>
 <li>R FAQ: <a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html" class="uri">https://cran.r-project.org/doc/FAQ/R-FAQ.html</a></li>
 <li>More about add-on packages in the R Installation and Administration
 Manual: <a href="https://cran.r-project.org/doc/manuals/R-admin.html#Add_002don-packages" class="uri">https://cran.r-project.org/doc/manuals/R-admin.html#Add_002don-packages</a></li>
+<li>ASReml-R package: <a href="https://vsni.co.uk/software/asreml-r" class="uri">https://vsni.co.uk/software/asreml-r</a></li>
 </ul>
 </div>
 
