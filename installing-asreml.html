@@ -1587,12 +1587,11 @@ method as above.</p>
 the following command:</p>
 <pre class="r"><code>install.packages(c(&quot;ASMap&quot;, &quot;wgaim&quot;))</code></pre>
 </div>
-<div id="non-cran-packages" class="section level2">
-<h2>Non-CRAN packages</h2>
-<p>Some packages are not available on R. These are commonly available to
-install via GitHub, but occasionally require a local installation.</p>
-<div id="github-packages" class="section level3">
-<h3>GitHub packages</h3>
+<div id="github-packages" class="section level2">
+<h2>GitHub packages</h2>
+<p>Some packages are not available on CRAN. These are commonly available
+to install via GitHub, but occasionally require a local
+installation.</p>
 <p>To install packages from GitHub, you will first require the
 <code>remotes</code> package:</p>
 <pre class="r"><code>if(!require(remotes)) install.packages(&quot;remotes&quot;)</code></pre>
@@ -1600,11 +1599,15 @@ install via GitHub, but occasionally require a local installation.</p>
 just the knowledge of the owner and repository names as in the following
 example:</p>
 <pre class="r"><code>remotes::install_github(&quot;biometryhub/weathervane&quot;)</code></pre>
-<p>This will download and install the package directly from GitHub, and
-may prompt you to update old packages already installed.</p>
+<p>The package in this example is called weathervane. It exists in a
+repository with the owner “biometryhub”. You can see this on the GitHub
+page here: <a href="https://github.com/biometryhub/weathervane" class="uri">https://github.com/biometryhub/weathervane</a>.</p>
+<p>The command above will download and install the package directly from
+GitHub, and may prompt you to update old packages that are already
+installed.</p>
 </div>
-<div id="non-github-non-cran-packages" class="section level3">
-<h3>Non-GitHub, Non-CRAN packages</h3>
+<div id="other-packages" class="section level2">
+<h2>Other packages</h2>
 <p>Some packages are not available on CRAN or GitHub, and must be
 installed via an alternative method. One example of this is the
 <code>ASExtras</code> package, which adds additional functionality to
@@ -1628,7 +1631,6 @@ install.packages(&quot;path/to/package.tar.gz&quot;, repos = NULL)  # macOS/Linu
 though you may need to install additional dependency packages of the
 package you just installed.</p>
 <hr />
-</div>
 </div>
 </div>
 <div id="Further" class="section level1">

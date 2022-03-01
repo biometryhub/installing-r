@@ -92,11 +92,11 @@ Most packages for R are available on CRAN, and can be installed with the followi
 install.packages(c("ASMap", "wgaim"))
 ```
 
-## Non-CRAN packages
 
-Some packages are not available on R. These are commonly available to install via GitHub, but occasionally require a local installation.
 
-### GitHub packages
+## GitHub packages
+
+Some packages are not available on CRAN. These are commonly available to install via GitHub, but occasionally require a local installation.
 
 To install packages from GitHub, you will first require the `remotes` package:
 
@@ -110,9 +110,11 @@ Once this is installed, you can install packages from GitHub with just the knowl
 remotes::install_github("biometryhub/weathervane")
 ```
 
-This will download and install the package directly from GitHub, and may prompt you to update old packages already installed.
+The package in this example is called weathervane. It exists in a repository with the owner "biometryhub". You can see this on the GitHub page here: https://github.com/biometryhub/weathervane.
 
-### Non-GitHub, Non-CRAN packages
+The command above will download and install the package directly from GitHub, and may prompt you to update old packages that are already installed.
+
+## Other packages
 
 Some packages are not available on CRAN or GitHub, and must be installed via an alternative method. One example of this is the `ASExtras` package, which adds additional functionality to `asreml`. To install this you will need to:
 
