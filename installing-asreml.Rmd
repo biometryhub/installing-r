@@ -5,14 +5,14 @@ author:
 - <center>biometrytraining@adelaide.edu.au<center>
 date: "<center>Last updated: `r format(Sys.Date(), format='%B %Y')`</center>"
 output:
-  html_document: 
-    toc: yes
-    toc_float: yes
-    highlight: textmate
   pdf_document:
     fig_caption: yes
     toc: yes
     highlight: tango
+  html_document: 
+    toc: yes
+    toc_float: yes
+    highlight: textmate
 linkcolor: blue
 urlcolor: blue
 ---
@@ -26,9 +26,9 @@ knitr::opts_chunk$set(eval = FALSE)
 
 # Introduction  
 
-These instructions assume you already have a working version of R on your computer. If this is not yet the case, please follow these instructions: https://biometryhub.github.io/installing-r/installing-r.html
+These instructions assume you already have a working version of R on your computer. If this is not yet the case, please follow these instructions: https://biometryhub.GitHub.io/installing-r/installing-r.html
 
-This guide does not assume any particular R development environment - it will work equally well with any option. You can find a PDF version of this guide here: https://github.com/biometryhub/installing-r/raw/master/installing-asreml.pdf
+This guide does not assume any particular R development environment - it will work equally well with any option. You can find a PDF version of this guide here: https://GitHub.com/biometryhub/installing-r/raw/master/installing-asreml.pdf
 
 
 This guide assumes you are running a relatively recent version of Microsoft Windows, for example Windows 8 or later, or Mac OS X/macOS 10.11 (El Capitan) or later. The guide will likely work for Debian based Linux distributions as well (E.g. Ubuntu flavours), however it is not extensively tested under those scenarios.
@@ -82,15 +82,50 @@ Ref: ABC12345 Expires: 2023-06-30, 487 days.
 
 # Additional Packages (Optional)
 
-If you are participating in an intership with the Biometry Hub, you may require additional packages installed, such as ASMap and wgaim.
+If you are participating in an intership with the Biometry Hub, you may require additional packages installed, such as ASMap and wgaim. Advice on further packages to install will be provided by your supervisor, but in many cases they can be installed using the same method as above.
 
-To install them, run the following command:
+## CRAN packages
+
+Most packages for R are available on CRAN, and can be installed with the following command:
 
 ```{r}
 install.packages(c("ASMap", "wgaim"))
 ```
 
-Advice on further packages to install will be provided by your supervisor, but in most cases they can be installed using the same method as above.
+## Non-CRAN packages
+
+Some packages are not available on R. These are commonly available to install via GitHub, but occasionally require a local installation.
+
+### GitHub packages
+
+To install packages from GitHub, you will first require the `remotes` package:
+
+```{r}
+if(!require(remotes)) install.packages("remotes")
+```
+
+Once this is installed, you can install packages from GitHub with just the knowledge of the owner and repository names as in the following example:
+
+```{r}
+remotes::install_github("biometryhub/weathervane")
+```
+
+This will download and install the package directly from GitHub, and may prompt you to update old packages already installed.
+
+### Non-GitHub, Non-CRAN packages
+
+Some packages are not available on CRAN or GitHub, and must be installed via an alternative method. One example of this is the `ASExtras` package, which adds additional functionality to `asreml`. To install this you will need to:
+
+1. Download the relevant package file for your Operating System and version of R. In the `ASExtras` example, the package website has the appropriate links for the files: https://mmade.org/asextras4/
+1. Once you have downloaded the file, you need to select it for installation. If using Rstudio, you can use the "Install" button in the Packages tab, and change the option in the top box ("Install from:") to "Package Archive File (.zip, .tar.gx)". This will cause a window to pop up to allow you to select the file you just downloaded.
+1. Alternatively you can use the command below, substituting the appropriate file path to the `.zip` or `.tar.gz` file.
+
+```{r}
+install.packages("path/to/package.zip", repos = NULL)  # Windows version
+install.packages("path/to/package.tar.gz", repos = NULL)  # macOS/Linux version
+```
+
+This should now proceed just like a regular package installation, though you may need to install additional dependency packages of the package you just installed.
 
 ---
 

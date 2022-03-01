@@ -1523,10 +1523,10 @@ Last updated: March 2022
 <h1>Introduction</h1>
 <p>These instructions assume you already have a working version of R on
 your computer. If this is not yet the case, please follow these
-instructions: <a href="https://biometryhub.github.io/installing-r/installing-r.html" class="uri">https://biometryhub.github.io/installing-r/installing-r.html</a></p>
+instructions: <a href="https://biometryhub.GitHub.io/installing-r/installing-r.html" class="uri">https://biometryhub.GitHub.io/installing-r/installing-r.html</a></p>
 <p>This guide does not assume any particular R development environment -
 it will work equally well with any option. You can find a PDF version of
-this guide here: <a href="https://github.com/biometryhub/installing-r/raw/master/installing-asreml.pdf" class="uri">https://github.com/biometryhub/installing-r/raw/master/installing-asreml.pdf</a></p>
+this guide here: <a href="https://GitHub.com/biometryhub/installing-r/raw/master/installing-asreml.pdf" class="uri">https://GitHub.com/biometryhub/installing-r/raw/master/installing-asreml.pdf</a></p>
 <p>This guide assumes you are running a relatively recent version of
 Microsoft Windows, for example Windows 8 or later, or Mac OS X/macOS
 10.11 (El Capitan) or later. The guide will likely work for Debian based
@@ -1577,13 +1577,59 @@ Ref: ABC12345 Expires: 2023-06-30, 487 days.</code></pre>
 <div id="additional-packages-optional" class="section level1">
 <h1>Additional Packages (Optional)</h1>
 <p>If you are participating in an intership with the Biometry Hub, you
-may require additional packages installed, such as ASMap and wgaim.</p>
-<p>To install them, run the following command:</p>
-<pre class="r"><code>install.packages(c(&quot;ASMap&quot;, &quot;wgaim&quot;))</code></pre>
-<p>Advice on further packages to install will be provided by your
-supervisor, but in most cases they can be installed using the same
+may require additional packages installed, such as ASMap and wgaim.
+Advice on further packages to install will be provided by your
+supervisor, but in many cases they can be installed using the same
 method as above.</p>
+<div id="cran-packages" class="section level2">
+<h2>CRAN packages</h2>
+<p>Most packages for R are available on CRAN, and can be installed with
+the following command:</p>
+<pre class="r"><code>install.packages(c(&quot;ASMap&quot;, &quot;wgaim&quot;))</code></pre>
+</div>
+<div id="non-cran-packages" class="section level2">
+<h2>Non-CRAN packages</h2>
+<p>Some packages are not available on R. These are commonly available to
+install via GitHub, but occasionally require a local installation.</p>
+<div id="github-packages" class="section level3">
+<h3>GitHub packages</h3>
+<p>To install packages from GitHub, you will first require the
+<code>remotes</code> package:</p>
+<pre class="r"><code>if(!require(remotes)) install.packages(&quot;remotes&quot;)</code></pre>
+<p>Once this is installed, you can install packages from GitHub with
+just the knowledge of the owner and repository names as in the following
+example:</p>
+<pre class="r"><code>remotes::install_github(&quot;biometryhub/weathervane&quot;)</code></pre>
+<p>This will download and install the package directly from GitHub, and
+may prompt you to update old packages already installed.</p>
+</div>
+<div id="non-github-non-cran-packages" class="section level3">
+<h3>Non-GitHub, Non-CRAN packages</h3>
+<p>Some packages are not available on CRAN or GitHub, and must be
+installed via an alternative method. One example of this is the
+<code>ASExtras</code> package, which adds additional functionality to
+<code>asreml</code>. To install this you will need to:</p>
+<ol style="list-style-type: decimal">
+<li>Download the relevant package file for your Operating System and
+version of R. In the <code>ASExtras</code> example, the package website
+has the appropriate links for the files: <a href="https://mmade.org/asextras4/" class="uri">https://mmade.org/asextras4/</a></li>
+<li>Once you have downloaded the file, you need to select it for
+installation. If using Rstudio, you can use the “Install” button in the
+Packages tab, and change the option in the top box (“Install from:”) to
+“Package Archive File (.zip, .tar.gx)”. This will cause a window to pop
+up to allow you to select the file you just downloaded.</li>
+<li>Alternatively you can use the command below, substituting the
+appropriate file path to the <code>.zip</code> or <code>.tar.gz</code>
+file.</li>
+</ol>
+<pre class="r"><code>install.packages(&quot;path/to/package.zip&quot;, repos = NULL)  # Windows version
+install.packages(&quot;path/to/package.tar.gz&quot;, repos = NULL)  # macOS/Linux version</code></pre>
+<p>This should now proceed just like a regular package installation,
+though you may need to install additional dependency packages of the
+package you just installed.</p>
 <hr />
+</div>
+</div>
 </div>
 <div id="Further" class="section level1">
 <h1>Further resources</h1>
