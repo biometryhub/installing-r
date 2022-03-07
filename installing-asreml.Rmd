@@ -1,18 +1,19 @@
 ---
 title: "<center>Installing and Configuring R and Rstudio with ASReml-R</center>"
+pagetitle: Installing ASReml-R
 author: 
 - <center>Biometry Hub, University of Adelaide<center>
 - <center>biometrytraining@adelaide.edu.au<center>
 date: "<center>Last updated: `r format(Sys.Date(), format='%B %Y')`</center>"
 output:
-  pdf_document:
-    fig_caption: yes
-    toc: yes
-    highlight: tango
   html_document: 
     toc: yes
     toc_float: yes
     highlight: textmate
+  pdf_document:
+    fig_caption: yes
+    toc: yes
+    highlight: tango
 linkcolor: blue
 urlcolor: blue
 ---

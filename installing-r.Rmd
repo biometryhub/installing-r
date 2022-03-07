@@ -1,5 +1,6 @@
 ---
 title: <center>Installing and Configuring R and RStudio</center>
+pagetitle: Installing R
 author: 
 - <center>Biometry Hub, University of Adelaide<center>
 - <center>biometrytraining@adelaide.edu.au<center>
@@ -124,7 +125,7 @@ These will be discussed further in the workshop, however to maximise learning ti
 Once RStudio is open (see [Check](#Check) above), just copy and paste the following command next to the `>` arrow in the console window on the left hand side of the session (see image below for placement), and then press enter.  
 
 ```{r, eval=FALSE}
-source("https://link.biometryhubwaite.com/installpackages")
+source("https://link.biometryhubwaite.com/installpackages"); required_packages()
 ```
 
 <br>  
