@@ -48,4 +48,3 @@ required_packages <- function(required) {
         message("\nRequired packages are installed.\n")
     }
 }
-required_packages()
