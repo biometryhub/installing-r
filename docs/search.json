@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "installing-r.html#R",
+    "href": "installing-r.html#R",
+    "title": "Installing and Configuring R and RStudio",
+    "section": "R",
+    "text": "R\nR is a language and platform for statistics, computing and graphics, that is freely available. Among the functions in R are facilities to handle data, integrated tools for data analysis, graphics facilities for data analysis and a simple, well developed programming language. For more information please visit the R project homepage listed in Further resources.\n\nWindows\n\nGo to https://cran.rstudio.com/bin/windows/base/release.htm to download the most recent version of R onto your computer.\nRun the downloaded file by opening the folder where you downloaded the file and double clicking on the filename (e.g. R-4.3.1.exe).\nInstallation to C:/Program Files is recommended, which may require administrative privileges.\nFollow the prompts in the installation. For our purposes, the installation defaults are satisfactory, so you can simply click on Next through the installation until it is complete.\n\n\n\nMac\n\nGo to https://cran.rstudio.com/bin/macosx/ and download the most recent version of R for your version of macOS onto your computer.\n\nmacOS 11 (Big Sur) and later (Apple M1 Chips or later): At the time of writing R 4.3.1 was the latest version.\nmacOS 11 (Big Sur) and later (Intel 64bit): At the time of writing R 4.3.1 was the latest version.\nmacOS 10.13 (High Sierra) and later (Intel 64bit): At the time of writing R 4.2.3 was the latest version."
+  },
+  {
+    "objectID": "installing-r.html#RStudio",
+    "href": "installing-r.html#RStudio",
+    "title": "Installing and Configuring R and RStudio",
+    "section": "RStudio",
+    "text": "RStudio\nRStudio is a powerful interactive development environment (IDE) for R which adds tools to make working with R easier. It is the recommended environment for all Biometry Hub training courses. In this section we describe the setup of RStudio.\n\nWindows\n\nDownload the latest version from https://posit.co/download/rstudio-desktop/#download.\nRun the downloaded file by opening the folder where you downloaded the file and double clicking on the filename.\nInstallation to C:/Program Files is recommended, which may require administrative privileges.\nAs with the R installation, the installation defaults are fine.\n\n\n\nMac\n\nDownload the latest version from http://rstudio.org/download/latest/stable/desktop/mac/RStudio-latest.dmg.\nRun the downloaded file by opening the folder where you downloaded the file and double clicking on the filename.\nAs with the R installation, the installation defaults are fine."
+  },
+  {
+    "objectID": "installing-r.html#Check",
+    "href": "installing-r.html#Check",
+    "title": "Installing and Configuring R and RStudio",
+    "section": "Check",
+    "text": "Check\nCheck that R and RStudio have installed correctly by opening RStudio. By default, RStudio usually doesn’t install an icon on your desktop, so search in the Start Menu (Windows) or Spotlight (Mac) for “RStudio”. The icon you want looks something like this: \nYou don’t need to click on the R icon, or run the program R, as RStudio will do this automatically for you.\nRStudio should start up and look something like this:"
+  },
+  {
+    "objectID": "installing-r.html#packages",
+    "href": "installing-r.html#packages",
+    "title": "Installing and Configuring R and RStudio",
+    "section": "Packages",
+    "text": "Packages\nThese will be discussed further in the workshop, however to maximise learning time, please follow the following steps to install these before the workshop. The steps are identical for all operating systems.\nOnce RStudio is open (see Check above), just copy and paste the following command next to the &gt; arrow in the console window on the left hand side of the session (see image below for placement), and then press enter.\n\nsource(\"https://link.biometryhubwaite.com/installpackages\"); required_packages()\n\n\n\n Note: This may take some time (5-10 minutes or more) depending on your internet speed and computer hardware. You will notice some red text appears in Rstudio, eventually followed by black text. This is normal and no cause for concern. You needn’t read or record any of the text. Here is an image of what this step will look like:\n\nIf this completes successfully, you will see “All required packages have been installed.” probably in red text. If there is an error, the installation will provide some instructions."
+  },
+  {
+    "objectID": "installing-asreml.html#biometryassist",
+    "href": "installing-asreml.html#biometryassist",
+    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "section": "biometryassist",
+    "text": "biometryassist\nYou will need the biometryassist package, which can be installed from CRAN via\n\nif(!require(biometryassist)) install.packages(\"biometryassist\")"
+  },
+  {
+    "objectID": "installing-asreml.html#asreml-r",
+    "href": "installing-asreml.html#asreml-r",
+    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "section": "ASReml-R",
+    "text": "ASReml-R\nOnce biometryassist is installed, the latest version of ASReml-R can then be installed with the commands\n\nlibrary(biometryassist)\ninstall_asreml()\n\nThe install_asreml() function comes from the biometryassist package, hence the need to install and load that first.\nAll going well, you should get a confirmation that ASReml-R is installed successfully."
+  },
+  {
+    "objectID": "installing-asreml.html#activate-asreml-r",
+    "href": "installing-asreml.html#activate-asreml-r",
+    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "section": "Activate ASReml-R",
+    "text": "Activate ASReml-R\nAfter you have installed ASReml-R, you will need to activate it. To do this, you will need to provide a licence code from VSNi, and possibly open two ports on your computer to allow communication over the internet with the VSNi licence server. To enter the licence code, use the following commands:\n\nlibrary(asreml)\nasreml.license.activate()\n\nThis will result in a prompt such as:\nPlease enter your activation code (RET or 0 to exit): \nThe licence code is usually in the format AAAA-BBBB-CCCC-DDDD. Once entered, your computer will connect to the VSNi licence server to check the code is correct, and you will be informed of the outcome.\nA successful licence activation will result in a message like the following:\nLicensed to ABcDEfg\nRef: ABC12345 Expires: 2023-06-30, 487 days."
+  },
+  {
+    "objectID": "installing-asreml.html#cran-packages",
+    "href": "installing-asreml.html#cran-packages",
+    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "section": "CRAN packages",
+    "text": "CRAN packages\nMost packages for R are available on CRAN, and can be installed with the following command:\n\ninstall.packages(c(\"ASMap\", \"wgaim\"))"
+  },
+  {
+    "objectID": "installing-asreml.html#github-packages",
+    "href": "installing-asreml.html#github-packages",
+    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "section": "GitHub packages",
+    "text": "GitHub packages\nSome packages are not available on CRAN. These are commonly available to install via GitHub, but occasionally require a local installation.\nTo install packages from GitHub, you will first require the remotes package:\n\nif(!require(remotes)) install.packages(\"remotes\")\n\nOnce this is installed, you can install packages from GitHub with just the knowledge of the owner and repository names as in the following example:\n\nremotes::install_github(\"biometryhub/weathervane\")\n\nThe package in this example is called weathervane. It exists in a repository with the owner “biometryhub”. You can see this on the GitHub page here: https://github.com/biometryhub/weathervane.\nThe command above will download and install the package directly from GitHub, and may prompt you to update old packages that are already installed."
+  },
+  {
+    "objectID": "installing-asreml.html#other-packages",
+    "href": "installing-asreml.html#other-packages",
+    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "section": "Other packages",
+    "text": "Other packages\nSome packages are not available on CRAN or GitHub, and must be installed via an alternative method. One example of this is the ASExtras package, which adds additional functionality to asreml. To install this you will need to:\n\nDownload the relevant package file for your Operating System and version of R. In the ASExtras example, the package website has the appropriate links for the files: https://mmade.org/asextras4/\nOnce you have downloaded the file, you need to select it for installation. If using Rstudio, you can use the “Install” button in the Packages tab, and change the option in the top box (“Install from:”) to “Package Archive File (.zip, .tar.gx)”. This will cause a window to pop up to allow you to select the file you just downloaded.\nAlternatively you can use the command below, substituting the appropriate file path to the .zip or .tar.gz file.\n\n\ninstall.packages(\"path/to/package.zip\", repos = NULL)  # Windows version\ninstall.packages(\"path/to/package.tar.gz\", repos = NULL)  # macOS/Linux version\n\nThis should now proceed just like a regular package installation, though you may need to install additional dependency packages of the package you just installed."
+  }
+]
