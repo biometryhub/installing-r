@@ -27,7 +27,7 @@ knitr::opts_chunk$set(eval = FALSE)
 
 These instructions assume you already have a working version of R on your computer. If this is not yet the case, please follow these instructions: <https://biometryhub.github.io/installing-r/installing-r.html>
 
-This guide does not assume any particular R development environment - it will work equally well with any option. You can find a PDF version of this guide here: <https://github.com/biometryhub/installing-r/installing-asreml.pdf>
+This guide does not assume any particular R development environment - it will work equally well with any option. You can find a PDF version of this guide here: <https://biometryhub.github.io/installing-r/installing-asreml.pdf>
 
 
 This guide assumes you are running a relatively recent version of Microsoft Windows, for example Windows 8 or later, or Mac OS X/macOS 10.11 (El Capitan) or later. The guide will likely work for Debian based Linux distributions as well (E.g. Ubuntu flavours), however it is not extensively tested under those scenarios.
