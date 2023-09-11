@@ -28,13 +28,6 @@
     "text": "Packages\nThese will be discussed further in the workshop, however to maximise learning time, please follow the following steps to install these before the workshop. The steps are identical for all operating systems.\nOnce RStudio is open (see Check above), just copy and paste the following command next to the &gt; arrow in the console window on the left hand side of the session (see image below for placement), and then press enter.\n\nsource(\"https://link.biometryhubwaite.com/installpackages\"); required_packages()\n\n\n\n Note: This may take some time (5-10 minutes or more) depending on your internet speed and computer hardware. You will notice some red text appears in Rstudio, eventually followed by black text. This is normal and no cause for concern. You needn’t read or record any of the text. Here is an image of what this step will look like:\n\nIf this completes successfully, you will see “All required packages have been installed.” probably in red text. If there is an error, the installation will provide some instructions."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Installing R, Rstudio and Packages",
-    "section": "",
-    "text": "This repository contains instructions on how to install R, Rstudio and some additional packages that may be necessary for Biometry Hub workshops, or similar situations.\nHome page\nInstallation Instructions for Intro to R\nInstallation Instructions for ASReml-R and ASMap etc"
-  },
-  {
     "objectID": "installing-asreml.html#biometryassist",
     "href": "installing-asreml.html#biometryassist",
     "title": "Installing and Configuring R and Rstudio with ASReml-R",
