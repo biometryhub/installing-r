@@ -37,42 +37,42 @@
   {
     "objectID": "installing-asreml.html#biometryassist",
     "href": "installing-asreml.html#biometryassist",
-    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "title": "Installing and Configuring R and Rstudio with ASReml-R",
     "section": "biometryassist",
     "text": "biometryassist\nYou will need the biometryassist package, which can be installed from CRAN via\n\nif(!require(biometryassist)) install.packages(\"biometryassist\")"
   },
   {
     "objectID": "installing-asreml.html#asreml-r",
     "href": "installing-asreml.html#asreml-r",
-    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "title": "Installing and Configuring R and Rstudio with ASReml-R",
     "section": "ASReml-R",
     "text": "ASReml-R\nOnce biometryassist is installed, the latest version of ASReml-R can then be installed with the commands\n\nlibrary(biometryassist)\ninstall_asreml()\n\nThe install_asreml() function comes from the biometryassist package, hence the need to install and load that first.\nAll going well, you should get a confirmation that ASReml-R is installed successfully."
   },
   {
     "objectID": "installing-asreml.html#activate-asreml-r",
     "href": "installing-asreml.html#activate-asreml-r",
-    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "title": "Installing and Configuring R and Rstudio with ASReml-R",
     "section": "Activate ASReml-R",
     "text": "Activate ASReml-R\nAfter you have installed ASReml-R, you will need to activate it. To do this, you will need to provide a licence code from VSNi, and possibly open two ports on your computer to allow communication over the internet with the VSNi licence server. To enter the licence code, use the following commands:\n\nlibrary(asreml)\nasreml.license.activate()\n\nThis will result in a prompt such as:\nPlease enter your activation code (RET or 0 to exit): \nThe licence code is usually in the format AAAA-BBBB-CCCC-DDDD. Once entered, your computer will connect to the VSNi licence server to check the code is correct, and you will be informed of the outcome.\nA successful licence activation will result in a message like the following:\nLicensed to ABcDEfg\nRef: ABC12345 Expires: 2023-06-30, 487 days."
   },
   {
     "objectID": "installing-asreml.html#cran-packages",
     "href": "installing-asreml.html#cran-packages",
-    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "title": "Installing and Configuring R and Rstudio with ASReml-R",
     "section": "CRAN packages",
     "text": "CRAN packages\nMost packages for R are available on CRAN, and can be installed with the following command:\n\ninstall.packages(c(\"ASMap\", \"wgaim\"))"
   },
   {
     "objectID": "installing-asreml.html#github-packages",
     "href": "installing-asreml.html#github-packages",
-    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "title": "Installing and Configuring R and Rstudio with ASReml-R",
     "section": "GitHub packages",
     "text": "GitHub packages\nSome packages are not available on CRAN. These are commonly available to install via GitHub, but occasionally require a local installation.\nTo install packages from GitHub, you will first require the remotes package:\n\nif(!require(remotes)) install.packages(\"remotes\")\n\nOnce this is installed, you can install packages from GitHub with just the knowledge of the owner and repository names as in the following example:\n\nremotes::install_github(\"biometryhub/weathervane\")\n\nThe package in this example is called weathervane. It exists in a repository with the owner “biometryhub”. You can see this on the GitHub page here: https://github.com/biometryhub/weathervane.\nThe command above will download and install the package directly from GitHub, and may prompt you to update old packages that are already installed."
   },
   {
     "objectID": "installing-asreml.html#other-packages",
     "href": "installing-asreml.html#other-packages",
-    "title": "\nInstalling and Configuring R and Rstudio with ASReml-R\n",
+    "title": "Installing and Configuring R and Rstudio with ASReml-R",
     "section": "Other packages",
     "text": "Other packages\nSome packages are not available on CRAN or GitHub, and must be installed via an alternative method. One example of this is the ASExtras package, which adds additional functionality to asreml. To install this you will need to:\n\nDownload the relevant package file for your Operating System and version of R. In the ASExtras example, the package website has the appropriate links for the files: https://mmade.org/asextras4/\nOnce you have downloaded the file, you need to select it for installation. If using Rstudio, you can use the “Install” button in the Packages tab, and change the option in the top box (“Install from:”) to “Package Archive File (.zip, .tar.gx)”. This will cause a window to pop up to allow you to select the file you just downloaded.\nAlternatively you can use the command below, substituting the appropriate file path to the .zip or .tar.gz file.\n\n\ninstall.packages(\"path/to/package.zip\", repos = NULL)  # Windows version\ninstall.packages(\"path/to/package.tar.gz\", repos = NULL)  # macOS/Linux version\n\nThis should now proceed just like a regular package installation, though you may need to install additional dependency packages of the package you just installed."
   }
