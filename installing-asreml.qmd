@@ -7,11 +7,11 @@ author:
 date: today
 date-format: "MMMM YYYY"
 toc: true
-output:
-  html_document: 
+format:
+  pdf:
+    pdf-engine: pdflatex
+  html:
     highlight: textmate
-  pdf_document:
-    highlight: tango
 linkcolor: blue
 urlcolor: blue
 ---
@@ -25,9 +25,9 @@ knitr::opts_chunk$set(eval = FALSE)
 
 # Introduction  
 
-These instructions assume you already have a working version of R on your computer. If this is not yet the case, please follow these instructions: https://biometryhub.github.io/installing-r/installing-r.html
+These instructions assume you already have a working version of R on your computer. If this is not yet the case, please follow these instructions: <https://biometryhub.github.io/installing-r/installing-r.html>
 
-This guide does not assume any particular R development environment - it will work equally well with any option. You can find a PDF version of this guide here: https://github.com/biometryhub/installing-r/raw/master/installing-asreml.pdf
+This guide does not assume any particular R development environment - it will work equally well with any option. You can find a PDF version of this guide here: <https://github.com/biometryhub/installing-r/installing-asreml.pdf>
 
 
 This guide assumes you are running a relatively recent version of Microsoft Windows, for example Windows 8 or later, or Mac OS X/macOS 10.11 (El Capitan) or later. The guide will likely work for Debian based Linux distributions as well (E.g. Ubuntu flavours), however it is not extensively tested under those scenarios.
@@ -135,8 +135,8 @@ This should now proceed just like a regular package installation, though you may
 The above will get your basic setup ready but here are some links if you are interested in reading a bit further.
 
 - R project homepage: <https://www.r-project.org/>
-- RStudio homepage: <https://www.rstudio.com/products/rstudio/>
-- How to Use RStudio: <https://www.rstudio.com/ide/docs/>
+- RStudio homepage: <https://posit.co/products/open-source/rstudio/>
+- How to Use RStudio: <https://support.posit.co/hc/en-us/categories/200035113-Documentation>
 - R Installation and Administration: <https://cran.r-project.org/doc/manuals/R-admin.html>
 - R FAQ: <https://cran.r-project.org/doc/FAQ/R-FAQ.html>
 - More about add-on packages in the R Installation and Administration Manual:  <https://cran.r-project.org/doc/manuals/R-admin.html#Add_002don-packages>
